@@ -23,9 +23,7 @@
 
 ## 📸 Screenshots
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c5091cb8-2187-428d-8aa9-c95476e3ccf9" alt="Screenshot 1" width="250"/>
-</p>
+<img src="https://github.com/user-attachments/assets/c5091cb8-2187-428d-8aa9-c95476e3ccf9" alt="Screenshot 1" />
 
 ## ⚙️ How It Works
 
