@@ -5,8 +5,11 @@ import android.graphics.Bitmap
 import com.engineerfred.cartoongan.utils.ImageUtils
 import org.tensorflow.lite.Interpreter
 import org.tensorflow.lite.support.common.FileUtil
+import javax.inject.Inject
 
-class AppRepository(private val context: Context ) {
+class AppRepository @Inject constructor(
+    private val context: Context
+) {
 
     companion object {
         private const val TFLITE_MODEL_NAME = "model.tflite"

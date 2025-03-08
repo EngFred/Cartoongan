@@ -13,7 +13,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.engineerfred.cartoongan.ui.MyScreen
 import com.engineerfred.cartoongan.ui.theme.CartoonganTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +23,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             CartoonganTheme {
                 //https://blog.tensorflow.org/2018/03/using-tensorflow-lite-on-android.html
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyScreen(
-                        applicationContext,
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                MyScreen(
+                    applicationContext
+                )
             }
         }
     }

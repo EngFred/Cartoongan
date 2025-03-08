@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -76,5 +78,13 @@ dependencies {
     //glide
     implementation(libs.glide.compose)
 
-    implementation("com.google.accompanist:accompanist-permissions:0.37.0")
+    //view model
+    implementation(libs.lifecycle.viewmodel)
+
+    //dagger-hilt
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.common)
+//    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    ksp(libs.hilt.android.compiler)
 }

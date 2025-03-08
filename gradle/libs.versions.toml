@@ -1,13 +1,13 @@
 [versions]
-agp = "8.8.0"
+agp = "8.9.0"
 kotlin = "2.1.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.10.0"
-composeBom = "2025.01.01"
+activityCompose = "1.10.1"
+composeBom = "2025.02.00"
 
 cameraxVersion = "1.4.1"
 tensorflowLite = "2.9.0"
@@ -17,6 +17,12 @@ tensorflowLiteTaskVision = "0.4.0"
 
 coilCompose = "3.0.4"
 glideCompose = "1.0.0-beta01"
+
+kspPlugin = "2.1.0-1.0.29"
+viewModel = "2.8.7"
+
+hiltCommon = "1.2.0"
+hilt= "2.55"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,8 +56,16 @@ tensorflow-lite-task-vision = { module = "org.tensorflow:tensorflow-lite-task-vi
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
 glide-compose = { module = "com.github.bumptech.glide:compose", version.ref = "glideCompose" }
 
+lifecycle-viewmodel = { group = "androidx.lifecycle", name ="lifecycle-viewmodel", version.ref = "viewModel"}
+
+hilt-android = { group="com.google.dagger", name="hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group="com.google.dagger", name="hilt-android-compiler", version.ref = "hilt" }
+hilt-common = { group="androidx.hilt", name="hilt-common", version.ref = "hiltCommon" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref="kspPlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
